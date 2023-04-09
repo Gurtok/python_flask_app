@@ -20,7 +20,7 @@ db_cursor.execute(
 
 db_cursor.execute(
     "INSERT INTO posts (title, content) VALUES (?,?)",
-    ('second post', 'contect of second post')
+    ('second post', 'content of second post')
 
 )
 
