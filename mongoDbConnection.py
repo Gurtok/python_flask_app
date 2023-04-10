@@ -7,11 +7,13 @@ collectionName = "testCollection"
 monogoClient = ""
 db = ""
 
-
+# When this class is instantiated, we establish DB connection.
+# Following DB calls will be run through this pool to avoid pool exhaustion errors.
 def __init__():
     try:
         mongoClient = pymongo.MongoClient(devMongoDbAddress)
         db = mongoClient['basicDB']
+        print("Connected to Mongo: ", devMongoDbAddress)
     except Exception as e:
         print("Failed to connect to MongoDB @", devMongoDbAddress)
         print(e)

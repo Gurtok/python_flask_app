@@ -1,6 +1,6 @@
 import pymongo, mongoDbConnection
 
-dbConn = mongoDbConnection.dbConnection()
+dbConn = mongoDbConnection.get_DB()
 #sampleQuery = {"name":"Gurtok"}
 
 #for document in dbConn.find():
